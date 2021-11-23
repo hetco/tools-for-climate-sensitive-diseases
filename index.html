@@ -24,13 +24,13 @@
                 </div>
             </div>
             <div id="navigation_bar" class="row">
-                <div class="col-md-4 nav_option active">
+                <div id="nav_option_1" class="col-md-4 nav_option active">
                     <p class="nav_option_text">Objectives</p>
                 </div>
-                <div class="col-md-4 nav_option">
+                <div id="nav_option_2" class="col-md-4 nav_option">
                     <p class="nav_option_text">Key Findings</p>
                 </div>
-                <div class="col-md-4 nav_option">
+                <div id="nav_option_3" class="col-md-4 nav_option">
                     <p class="nav_option_text">Full List of Tools</p>
                 </div>
             </div>
@@ -56,10 +56,15 @@
                     </ul>
                 </div>
                 <div class="col-md-4 main_body_drop">
-                    <img id="process_diagram" src="https://via.placeholder.com/500x700/777.png"/>
+                    <img id="process_diagram" src="images/process.png"/>
                 </div>
             </div>
         </div>
+        <script>
+            let navOption1 = '';
+            let navOption2 = '/key-findings';
+            let navOption3 = '/tool-list';
+        </script>
         <script src="js/site.js"></script>
     </body>
 </html>

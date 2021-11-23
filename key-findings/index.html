@@ -25,31 +25,214 @@
                 </div>
             </div>
             <div id="navigation_bar" class="row">
-                <div class="col-md-4 nav_option">
+                <div id="nav_option_1" class="col-md-4 nav_option">
                     <p class="nav_option_text">Objectives</p>
                 </div>
-                <div class="col-md-4 nav_option active">
+                <div id="nav_option_2" class="col-md-4 nav_option active">
                     <p class="nav_option_text">Key Findings</p>
                 </div>
-                <div class="col-md-4 nav_option">
+                <div id="nav_option_3" class="col-md-4 nav_option">
                     <p class="nav_option_text">Full List of Tools</p>
                 </div>
             </div>
             <div class="main_body row">
                 <div class="col-md-12 key_finding" data-finding="1"><p class="key_finding_title">1. Very few robust, evidence-led operationalised models exist.<i id="icon_1" class="arrow down"></i></p></div>
                 <div id="expanded_finding_1" class="col-md-12 expanded_finding">
-                    <p>Expanding 1</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="recommendation">Finding</p>
+                            <p>After searching PubMed for papers published over the last 10 years, using a customized API and keywords for scoping climate and health software, we found only 37 fully developed and named tools.</p>
+
+                            <p>This suggests that few studies progress from providing the initial evidence of climate-health linkages to the operationalization of a decision support tool that could inform actions to reduce the burden of disease. Our qualitative research indicated that this might be due to lack of incentives for academics to publish full models, and lack of multi-disciplinary communities which bring together scientists and software developers.</p>
+
+                            <p>Although only 37 tools met our full list of characteristics, we found several models of climate and infectious disease that had well described, freely accessible model outputs but no access to code repositories.</p> 
+
+                            <p>Examples of two such models were an Aedes mosquito model from Ryan et al. (2019)<span class="reference_number">1</span>, and a dengue climate forecasting model from Lowe et al. (2021)<span class="reference_number">2</span>. The former had no associated code repository and the later had no named software platform. Both models can potentially be developed into software packages or platforms.</p> 
+
+                            <p class="recommendation">Recommendation</p>
+                            <p class="recommendation2">Transition validated models into tools.</p> 
+                            There are useful models and codes associated with publications that exist on online repositories like GitHub, but there is a gap in translating this research into automated, packaged tools. Researchers who are developing these models can be connected to software engineers. An investment in these validated models could result in the rapid creation of new tools.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../images/key_finding_1.png" class="key_finding_image"/>
+                            <p class="reference">1. Ryan SJ, Carlson CJ, Mordecai EA, Johnson LR. Global expansion and redistribution of Aedes-borne virus transmission risk with climate change. PLoS Negl Trop Dis. 2019;13: e0007213</p>
+
+                            <p class="reference">2. Lowe R, Lee SA, O’Reilly KM, Brady OJ, Bastos L, Carrasco-Escobar G, et al. Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study. Lancet Planet Health. 2021;5: e209–e219.</p>                            
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-12 key_finding" data-finding="2"><p class="key_finding_title">2. Vast majority for vector-borne disease systems.<i id="icon_2" class="arrow down"></i></p></div>
+                <div class="col-md-12 key_finding" data-finding="2"><p class="key_finding_title">2. Vast majority of existing tools are for vector-borne disease systems.<i id="icon_2" class="arrow down"></i></p></div>
                 <div id="expanded_finding_2" class="col-md-12 expanded_finding">
-                    <p>Expanding 2</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="recommendation">Finding</p>
+                            <p>The majority of tools identified in our review (81.1%) focused on vector-borne disease systems. Only 10% of modeling tools were applied to infectious diseases with other modes of transmission, including respiratory (5.4%), foodborne (2.7%), and waterborne (2.7%). There were no specific tools for soil-borne diseases.</p>
+
+                            <p>We targeted specific pathogens and disease classes and of 42 disease terms we searched for, there were robust tools for only six. Most notably, we could not identify a robust tool for Ebola.</p>
+
+                            <p>The closest match was <a href="http://seeg-oxford.github.io/ebola-spread/global-risk">Ebola-Spread</a><span class="reference_number">3</span>, a predictive niche modelling tool from Oxford University. The associated github repository has incomplete code, requiring the user to have the data inputs that are not specified or linked, and the repository itself was not upto date, meaning it is effectively unusable.</p>
+
+                            <p class="recommendation">Recommendation</p>
+                            <p class="recommendation2">Tools for neglected disease groups.</p>
+                            <p>There is an opportunity to develop tools for climate-sensitive diseases transmission modes that have been neglected (e.g., respiratory, foodborne, soilborne, waterborne) to increase the preparedness of the public health sector for the next pandemic.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <table id="key_findings_2_table" class="table findings_table">
+                                <tbody>
+                                <tr><td class="blue_cell">Dengue</td><td>Hantavirus Pulmonary Syndrome</td><td>Trypanosomiasis </td><td>Rabies</td><td>Parapoxvirus</td><td>Borreliosis</td></tr>
+                                 <tr><td class="blue_cell">Malaria</td><td>Hemorrhagic Fever With Renal Syndrome</td><td>Yellow Fever</td><td>Anaplasmosis</td><td>Pestivirus</td><td>Alphaherpes Virus</td></tr>
+                                 <tr><td class="blue_cell">Zika</td><td>Respiratory Syncitial Virus (Rsv)</td><td>Leishmaniasis</td><td>Campylobacter Infection</td><td>Necrobacillosis</td><td>Plague</td></tr>
+                                 <tr><td class="blue_cell">Chikugunya</td><td class="blue_cell">Influenza</td><td>Salmonellosis</td><td>West Nile Fever</td><td>Clostridiosis</td><td>Filariasis</td></tr>
+                                 <tr><td>Leprospirosis</td><td class="blue_cell">Vibrio</td><td>Gammaherpes Virus</td><td>Botulism</td><td>Cryptosporidiosis</td><td>Babesiosis</td></tr>
+                                 <tr><td>Cholera</td><td class="red_cell">Ebola</td><td>Tuberculosis</td><td>Anthrax</td><td>Diarrhea*</td><td>Pasteurellosis</td></tr>
+                                 <tr><td>Rift Valley Fever</td><td>Schistosomiasis</td><td>Onchocercosis</td><td>Clostridiosis</td><td>Chagas</td><td>Giardiasis</td></tr>
+                                </tbody>
+                            </table>
+                            <p><i class="blue_cell key"></i> Robust Tools Exist</p>
+                            <p><i class="red_cell key"></i> High Priority Disease With No Tool.</p>
+                            <p class="reference">3. Kraemer, M. U., Golding, N., Bisanzio, D., Bhatt, S., Pigott, D. M., Ray, S. E., ... & Reiner, R. C. (2019). Utilizing general human movement models to predict the spread of emerging infectious diseases in resource poor settings. Scientific reports, 9(1), 1-11.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-12 key_finding" data-finding="3"><p class="key_finding_title">3. Only a quarter were potentially useful for decision makers.<i id="icon_3" class="arrow down"></i></p></div>
+                <div class="col-md-12 key_finding" data-finding="3"><p class="key_finding_title">3. Only a quarter of the tools were potentially useful for decision makers.<i id="icon_3" class="arrow down"></i></p></div>
                 <div id="expanded_finding_3" class="col-md-12 expanded_finding">
-                    <p>Expanding 3</p>
+                   <div class="row">
+                        <div class="col-md-6">
+                            <p class="recommendation">Finding</p>
+                            <p>More than half of the tools were described as operationalized; however, only one quarter were freely available online and one quarter had interfaces legible to finance, policy and regional decision makers. Those that did have legible interfaces were funded by an institutional or country-level partner.</p> 
+                            <p>By a legible interface we mean a graphical user interface which enables decision makers to understand the disease risks, without diving into code or mathematical formulas.</p>
+                            <p>An example of a legible model was <a href="http://eltahir.info/">HYDREMATS</a><span class="reference_number">4</span>, where the current and future scenarios for malaria risk in West Africa are visualised over a map. The interface enables a user to select a year and explore the mean monthly rainfall (mm), temperature, immunity index, malaria prevalence, entomological inoculation rate and R0 as predicted by the model. It also provides a brief explanation of the model itself.</p>
+                            <p class="recommendation">Recommendation</p>
+                            <p class="recommendation2">Co-creation of tools</p>
+                            Transitioning research to public health practise must be accounted for from the project outset since the data that feed into the model and the model output (e.g., interfaces) need to align with decision making processes identified by public health professionals. To achieve this, transdisciplinary project teams can include academic partners with sectoral partners, to ensure that researchers and end-users co-create models, eliminating the last mile problem. 
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table findings_table">
+                                <tbody>
+                                   <tr>
+                                    <td>FleaTickRisk</td><td>Boehringer Ingelheim Animal Health</td></tr>
+                                    <tr><td>ECDC Vibrio Map Viewer</td><td>European Centre for Disease Prevention and Control (ECDC)</td></tr>
+                                     <tr><td>ArboMAP</td><td>Louisiana Department of Health, OKC County Health Department, Oklahoma State Department of Health, Michigan Department of Health and Human Services, South Dakota Department of Health, South Dakota State University</td></tr>
+                                     <tr><td>DMD</td><td>Italian National Reference Center for Foreign Animal Disease (CESME) and the Italian National Reference Center for Epidemiology (COVEPI)</td></tr>
+                                     <tr><td>eRiskMapper</td><td>Developed by University of Oxford</td></tr>
+                                     <tr><td>RIF</td><td>PHE, CDC, UK Small Area Health Statistics Unit (SAHSU)</td></tr>
+                                     <tr><td>AeDES</td><td>PAHO, WHO</td></tr>
+                                     <tr><td>EWARS</td><td>Mexican Ministry of Health, Ministry of Health Malaysia, Ministry of Health Brazil</td></tr>
+                                     <tr><td>MARA</td><td>Medical Research Council (MRC) of South Africa, Swiss Tropical and Public Health Institute, Bill and Melinda Gates Foundation, Wellcome Trust</td></tr>
+                                     <tr><td>SCOPIC</td><td>Australian Bureau of Meteorology, developed for MalaClim project</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="reference">4. Yamana TK, Eltahir EAB.2013. Projected Impacts of Climate Change on Environmental Suitability for Malaria Transmission in West Africa. 121:10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 key_finding" data-finding="4"><p class="key_finding_title">4. The majority of tools were created for countries where the disease of interest is endemic.<i id="icon_4" class="arrow down"></i></p></div>
+                <div id="expanded_finding_4" class="col-md-12 expanded_finding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="recommendation">Finding</p>
+                            <p>Most tools were developed for, and implemented in geographic areas where the infectious disease of interest is currently endemic. The tools found in this review had been implemented in several WHO regions, spanning Africa (43.8%), the Americas (14.6%), Europe (10.4%), the Western Pacific (10.4)%, South-East Asia (6.3%), and the Eastern Mediterranean (2.1%). Four tools (8.3%) did not focus on a single geographic region, but rather a global study.</p>
+                            <p class="recommendation">Recommendation</p>
+                            <p class="recommendation2">Tools for zones of emergence</p>
+                            <p>Tools are needed for regions where the climate-driven risk of infectious disease transmission will increase substantially (zones of emergence) due to climate change, demographic shifts, and other factors.</p>
+                            <p>There is also an opportunity to cross-pollinate knowledge and experiences between regions that are currently endemic for climate sensitive diseases and regions of projected disease emergence due to climate change.</p>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 key_finding" data-finding="5"><p class="key_finding_title">5. There is a need for greater representation of the Global South in tool creation.<i id="icon_5" class="arrow down"></i></p></div>
+                <div id="expanded_finding_5" class="col-md-12 expanded_finding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="recommendation">Finding</p>
+                            <p>North American and European institutions are disproportionately represented as tool-creators (38% in the USA and UK alone). There is a need for greater representation of the Global South, where many of the tools were designed to be used.</p>
+                            <p>There were 102 institutions represented in the author list of the 48 publications screened in our review. Over one third (38.2%) of these institutions were based in the USA or UK. Only 24 institutions were associated with more than one paper, which included universities and agencies located in Europe (n=11), the Americas (n=8), the Western Pacific (n=3), and South-east Asia (n=1).</p>
+                            <p>Designated corresponding authors for the 37 tools were based in the USA (32.4%), UK (27.0%), other European countries (29.7%), Australia (5.4%), South-east Asian countries (5.4%), and Tanzania (2.7%).</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>An analysis of 9000 publications related to modelling at the intersection of climate change and infectious disease revealed that:</p>
+                            <ul>
+                                <li>
+                                LSHTM acting as bridge between North America and Asia & Pacific</li>
+                                <li>Norwegian Institute of Public Health acting as a conduit into Scandinavian Institutions</li>
+                                <li>Africa and South/Central America under-represented, but certain institutions are building outreach such as the University of Florida.</li>
+                                <li>Separate network with Liverpool University at the centre.</li>
+                            </ul>
+                            <p class="recommendation">Recommendation</p>
+                            <p class="recommendation2">Equity and diversity of investigators</p>
+                            <p>There is a need to support teams that are led or co-led by researchers and other partners from the Global South, where the impacts of climate sensitive infectious diseases are the greatest.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../images/key_finding_5.png" class="key_finding_image"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 key_finding" data-finding="6"><p class="key_finding_title">6. There is a need for tools across a range of spatial and temporal scales.<i id="icon_6" class="arrow down"></i></p></div>
+                <div id="expanded_finding_6" class="col-md-12 expanded_finding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="recommendation">Finding</p>
+                            <p>We identified large variations in the spatial and temporal scale of the 37 tools.</p> 
+
+                            <p>The spatial scale of tools, which includes geographic extent and unit of model output, varied considerably for tools in our final list. Model scales ranged from highly localized foci (8.1%), for example simulations for individual villages, to tools with a global or continental extent (16.2%).</p> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Some examples of local tools from our final list include ANOSPEX, SLIM, and FleaTickRisk, while MARA, Vibrio Map Viewer, and the albopictus package operate on broader, continental scales.</p> 
+
+                            <p>The ideal scale of tool is dependent on goals; local tools may be limited in terms of where they can be operationalized, and their transferability, while being well validated locally. Tools with very coarse resolutions may aid broad planning efforts, but be of limited use to local stakeholders. The takeaway here is that there is no “best” scale for models, and it is important to encourage models at different scales to help facilitate decision-making at different granularities.</p>
+
+                            <p>Few models forecast disease risk beyond the seasonal climate outlook.</p>
+                            <p class="recommendation">Recommendation</p>
+                            <p class="recommendation2">Multi-scalar tools</p>
+                            <p>There is a need to develop tools across a range of spatio-temporal scales to capture climate and disease processes at different scales and to support decision making needs across scales. An analysis of the gaps in the spatial and temporal data infrastructure would provide important guidance on gold standards.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../images/key_finding_6.jpeg" class="key_finding_image"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 key_finding" data-finding="7"><p class="key_finding_title">7. Health sectors don’t have a mandate to focus on climate impact on health (yet).<i id="icon_7" class="arrow down"></i></p></div>
+                <div id="expanded_finding_7" class="col-md-12 expanded_finding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="recommendation">Finding</p>
+                            <p>We found that climate datasets are readily available, but sharing of health datasets is politically sensitive. Most public health and climate sectors don’t have a mandate to focus on the climate impacts on health (yet). There is a need to influence and inform policy and dataset sharing.</p>
+                            <p class="recommendation">Recommendation</p>
+                            <p class="recommendation2">Policy Action</p>
+                            <p>There is interest from the climate and health sectors to work together to co-create modelling tools. However, often the sectors lack clear mechanisms for data sharing or lack a political mandate to engage in these efforts. There is a need to influence and inform policies that encourage intersectoral collaboration and data sharing to address climate impacts on health.</p>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 key_finding" data-finding="8"><p class="key_finding_title">8. There are key barriers to tool implementation.<i id="icon_8" class="arrow down"></i></p></div>
+                <div id="expanded_finding_8" class="col-md-12 expanded_finding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="recommendation">Finding</p>
+                            <p>Common barriers to tool implementation include lack of effective communication between modelers and decision makers, lack of personnel to maintain and operate systems, and difficulty in training new users to operate and update the tools. The lack of communication often leads to confusion about tool goals. We also identified a lack of information on climate-disease modeling tools for non-English speaking countries, increasing the inequities in the field. There is an opportunity to improve science communications, to produce information in multiple languages, and to build the capacity of local experts who are tool users.</p>
+                            <p class="recommendation">Recommendation</p>
+                            <p class="recommendation2">Science communication needs</p>
+                            <p>There is an opportunity to improve the communication between modelers and decision makers, such as the creation of useful public visuals that decision makers can use to create and enact evidenced based policy. Science communication experts and graphic designers should be incorporated into research teams. There is also an opportunity to translate available information on tools for non-English speaking countries.</p>
+                            <p class="recommendation2">Capacity building for tool users</p>
+                            <p>There is a critical need to train and sustain the next generation of tool users, such as local experts in ministries of health, through training materials that are freely available in different languages.</p>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            let navOption1 = '../';
+            let navOption2 = '';
+            let navOption3 = '../tool-list';
+        </script>
         <script src="../js/site.js"></script>
     </body>
 </html>

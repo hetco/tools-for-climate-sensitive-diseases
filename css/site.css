@@ -1,10 +1,11 @@
 body {
     font-family: 'Roboto', sans-serif;
+    color:#333;
 }
 
 #headline_image {
     height:500px;
-    background:url(https://via.placeholder.com/1920x800/777.png)
+    background:url('../images/banner-image.png')
                 no-repeat
                 center center/cover;
 }
@@ -14,7 +15,7 @@ body {
   top: 160px;
   left: 10%;
   font-size:2em;
-  color:#FFF;
+  color:#333;
 }
 
 .headline_banner {
@@ -66,6 +67,10 @@ body {
     cursor:pointer;
 }
 
+.expanded {
+    border-bottom:0px solid #000;
+}
+
 .key_finding_title {
     font-size:2em;
 }
@@ -91,4 +96,73 @@ body {
 .up {
   transform: rotate(225deg);
   -webkit-transform: translate(10px,0px) rotate(225deg); 
+}
+
+#tooltable {
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.details {
+  background-color:#f0f0f0;
+  display:none;
+}
+
+.key_word {
+  font-weight:800;
+}
+
+.reference {
+  font-size:0.8em;
+}
+
+.reference_number {
+   vertical-align: super;
+   font-size:0.6em;
+}
+
+.key_finding_image {
+  width:80%;
+  padding-left:10%;
+  margin-bottom:30px;
+}
+
+.recommendation {
+  font-weight:800;
+}
+
+.recommendation2 {
+  font-weight:800;
+  font-size:1.2em;
+}
+
+.expanded_finding {
+  padding-left:5%;
+  padding-right:5%;
+}
+
+.findings_table {
+  width:90%;
+  padding-left:5%;
+  font-size:0.65em;
+}
+
+.findings_table td {
+  border:1px solid #ddd;
+  height:60px;
+}
+
+.blue_cell {
+  background-color:#E3F2FD!important;
+}
+
+.red_cell {
+  background-color:#FFCDD2!important;
+}
+
+.key {
+  height:18px;
+  width:18px;
+  float:left;
+  margin-right:8px;
 }
