@@ -26,6 +26,14 @@ body {
   color:#FFF;
 }
 
+.dark_link {
+  color:#333;
+}
+
+.dark_link:hover {
+  color:#333;
+}
+
 .headline_text {
   position: absolute;
   top: 160px;
@@ -195,4 +203,8 @@ body {
   width:18px;
   float:left;
   margin-right:8px;
+}
+
+#reportimage {
+  width:300px;
 }
