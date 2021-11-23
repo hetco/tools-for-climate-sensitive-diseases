@@ -10,22 +10,45 @@ body {
                 center center/cover;
 }
 
+.image_text {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size:1em;
+  color:#FFF;
+}
+
+.light_link {
+  color:#FFF;
+}
+
+.light_link:hover {
+  color:#FFF;
+}
+
 .headline_text {
   position: absolute;
   top: 160px;
   left: 10%;
   font-size:2em;
-  color:#333;
+  color:#FFF;
 }
 
 .headline_banner {
     position:relative;
 }
 
+#navigation_bar {
+  position: sticky;
+  top: 0;
+  z-index:100;
+}
+
 .nav_option {
     cursor:pointer;
     padding:5px;
     border:1px #000 solid;
+    background-color:white;
 }
 
 .nav_option_text {
@@ -42,6 +65,13 @@ body {
 .main_body {
     padding-top:30px;
     padding-bottom:30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .main_body {
+      padding-left:10%;
+      padding-right:10%;
+  }
 }
 
 .subtitle {
@@ -72,11 +102,12 @@ body {
 }
 
 .key_finding_title {
-    font-size:2em;
+    font-size:1.4em;
 }
 
 .expanded_finding {
     display:none;
+    padding-bottom:60px;
 }
 
 /* css icons */
@@ -113,7 +144,7 @@ body {
 }
 
 .reference {
-  font-size:0.8em;
+  font-size:0.65em;
 }
 
 .reference_number {
@@ -129,6 +160,7 @@ body {
 
 .recommendation {
   font-weight:800;
+  margin-bottom:0px;
 }
 
 .recommendation2 {
@@ -153,11 +185,11 @@ body {
 }
 
 .blue_cell {
-  background-color:#E3F2FD!important;
+  background-color:#E6F0FA!important;
 }
 
 .red_cell {
-  background-color:#FFCDD2!important;
+  background-color:#F0CDD2!important;
 }
 
 .key {
