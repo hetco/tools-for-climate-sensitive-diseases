@@ -108,6 +108,9 @@ body {
 .expanded_finding {
     display:none;
     padding-bottom:60px;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:30px;
 }
 
 /* css icons */
@@ -166,11 +169,6 @@ body {
 .recommendation2 {
   font-weight:800;
   font-size:1.2em;
-}
-
-.expanded_finding {
-  padding-left:5%;
-  padding-right:5%;
 }
 
 .findings_table {
