@@ -1,11 +1,12 @@
 body {
     font-family: 'Roboto', sans-serif;
     color:#333;
+    background-color: #fefef3;
 }
 
 #headline_image {
     height:500px;
-    background:url('../images/banner-image.png')
+    background:url('../images/banner-image.jpg')
                 no-repeat
                 center center/cover;
 }
@@ -82,6 +83,13 @@ body {
   }
 }
 
+@media only screen and (min-width: 1600px) {
+  .main_body {
+      padding-left:15%;
+      padding-right:15%;
+  }
+}
+
 .subtitle {
     font-weight:900;
 }
@@ -93,8 +101,12 @@ body {
 /*objectives page */
 
 #process_diagram {
-    width:80%;
-    padding-left:10%;
+  width: 100%;
+}
+
+#process_container {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /*key findings page*/ 
