@@ -39,12 +39,49 @@ if(navOption3==''){
 	$.ajax({
 		url: "../data/tools.json",
 		success: function(result){
-	    	addTools(result);
+	    	addTools(result,'','No filter');
+	    	addToolFilter(result,'Mode of transmission',1);
+	    	addToolFilter(result,'Region',2);
 		}
 	});
 }
 
-function addTools(tools){
+function addToolFilter(tools,key,i){
+	let filterHTML = '';
+	let filterList = [];
+	tools.forEach(function(t){
+		let value = t[key];
+		if(filterList.indexOf(value)==-1){
+			filterList.push(value);
+		}
+	});
+	$('#toolfilter').append(key+': <select id="filter_'+i+'" class="filters"></select>');
+	$('#filter_'+i).append('<option>No filter</option>');
+	filterList.forEach(function(f){
+		$('#filter_'+i).append('<option>'+f+'</option>');
+	});
+	$('#filter_'+i).on('change',function(){
+		let value = $(this).val();
+		$('.filters').val('No filter');
+		$(this).val(value);
+		addTools(tools,key,value);
+	});
+}
+
+function addTools(tools,key,value){
+	console.log(key);
+	console.log(value);
+	if(value!='No filter'){
+		tools = tools.filter(function(t){
+			if(t[key] == value){
+				return true
+			} else {
+				return false
+			}
+		});
+	}
+	console.log(tools);
+	$('#tools').html('');
 	tools.forEach(function(tool,i){
 		let toolHTML = `
 			<tr class="tool">
@@ -53,12 +90,12 @@ function addTools(tools){
 				<td>{{output}}</td>
 				<td>{{Regions}}</td>
 				<td>{{software}}</td>
-				<td><button id="{{id}}" class="btn btn-secondary">See details</button></td>
+				<td><button id="{{id}}" class="btn btn-light">See details</button></td>
 			</tr>
 		`
 		let toolID = 'tool_'+i;
 		let detailID = "detail_"+i;
-		toolHTML = toolHTML.replace('{{id}}',toolID).replace('{{tool name}}',tool['Model name']).replace('{{disease}}',tool['Infectious diseases (pathogens)']).replace('{{output}}',tool['Model Output']).replace('{{software}}',tool['Software']).replace('{{Regions}}',tool['Region']+tool['Region 2'])
+		toolHTML = toolHTML.replace('{{id}}',toolID).replace('{{tool name}}',tool['Model name']).replace('{{disease}}',tool['Infectious diseases (pathogens)']).replace('{{output}}',tool['Model Output']).replace('{{software}}',tool['Software']).replace('{{Regions}}',tool['Region']+' '+tool['Region 2'])
 		$('#tools').append(toolHTML);
 		let detailHTML = `
 			<tr id="{{id}}" class="details">
