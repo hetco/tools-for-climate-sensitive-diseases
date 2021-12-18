@@ -176,14 +176,20 @@ body {
 }
 
 .key_finding_image {
-  width:80%;
-  padding-left:10%;
+  width:95%;
+  padding-left:5%;
   margin-bottom:30px;
+}
+
+.finding {
+  font-weight:800;
+  margin-bottom:0px;
 }
 
 .recommendation {
   font-weight:800;
   margin-bottom:0px;
+  margin-top:60px;
 }
 
 .recommendation2 {
@@ -231,4 +237,22 @@ body {
 
 select {
   margin-right:30px;
+}
+
+.tool_list {
+  font-size:0.8em;
+}
+
+.toolcell {
+  padding:5px;
+}
+
+.toolbox {
+  padding:5px;
+  border:1px solid #000;
+  min-height:70px;
+}
+
+.toolstable td {
+  border-width:0px;
 }
