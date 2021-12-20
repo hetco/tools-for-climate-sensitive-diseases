@@ -41,6 +41,7 @@ body {
   left: 10%;
   font-size:2em;
   color:#FFF;
+  font-weight:500;
 }
 
 .headline_banner {
@@ -251,8 +252,23 @@ select {
   padding:5px;
   border:1px solid #000;
   min-height:70px;
+  font-weight:900;
 }
 
 .toolstable td {
   border-width:0px;
+}
+
+#footer {
+  padding-top:30px;
+  padding-bottom:30px;
+  background-color:#F2F2F2;
+  min-height:100px;
+  margin-top:30px;
+}
+
+
+.footer-logo {
+  padding-left:15px;
+  padding-right:15px;
 }
