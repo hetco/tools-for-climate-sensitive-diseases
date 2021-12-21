@@ -129,7 +129,7 @@ function addTools(tools,key,value){
 		detailHTML = detailHTML.replace('{{id}}',detailID).replace('{{details1}}',detailList1).replace('{{details2}}',detailList2);
 		$('#tools').append(detailHTML);
 		$('#'+toolID).on('click',function(){
-			console.log('expand details');
+			$('.details').hide();
 			$('#'+detailID).show();
 		});
 	});

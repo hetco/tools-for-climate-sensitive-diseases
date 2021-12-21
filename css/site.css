@@ -201,7 +201,7 @@ body {
 .findings_table {
   width:90%;
   padding-left:5%;
-  font-size:0.65em;
+  font-size:0.75em;
 }
 
 .findings_table td {
@@ -244,15 +244,23 @@ select {
   font-size:0.8em;
 }
 
-.toolcell {
-  padding:5px;
-}
-
 .toolbox {
   padding:5px;
   border:1px solid #000;
-  min-height:70px;
+  min-height:90px;
   font-weight:900;
+  margin-bottom: 15px;
+}
+
+.toolshortname {
+    font-size: 0.75em;
+    margin-bottom: 0px;
+}
+
+.toollongname {
+    font-size: 0.65em;
+    font-weight: 400;
+
 }
 
 .toolstable td {
@@ -271,4 +279,9 @@ select {
 .footer-logo {
   padding-left:15px;
   padding-right:15px;
+}
+
+.figure_title {
+  font-style: italic;
+  margin-top: 1.5em;
 }
